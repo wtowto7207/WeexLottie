@@ -17,6 +17,7 @@
 
 - (void)play;
 - (void)reset;
+- (void)pause;
 - (void)setValue:(NSString *)keyPath atFrame:(NSNumber *)frame withColor:(UIColor *)color;
 
 @end
@@ -37,6 +38,13 @@
 {
     if (_animationView != nil) {
         [_animationView play];
+    }
+}
+
+-(void)pause
+{
+    if (_animationView) {
+        [_animationView pause];
     }
 }
 
@@ -151,6 +159,7 @@
 WX_PlUGIN_EXPORT_COMPONENT(lottie, WXLottieComponent)
 WX_EXPORT_METHOD(@selector(play))
 WX_EXPORT_METHOD(@selector(reset))
+WX_EXPORT_METHOD(@selector(pause))
 WX_EXPORT_METHOD(@selector(setValue:))
 
 - (instancetype)initWithRef:(NSString *)ref type:(NSString *)type styles:(NSDictionary *)styles attributes:(NSDictionary *)attributes events:(NSArray *)events weexInstance:(WXSDKInstance *)weexInstance
@@ -171,6 +180,13 @@ WX_EXPORT_METHOD(@selector(setValue:))
 {
     if (self.isViewLoaded) {
         [(WXLottieView*)self.view play];
+    }
+}
+
+- (void)pause
+{
+    if (self.isViewLoaded) {
+        [(WXLottieView*)self.view pause];
     }
 }
 
