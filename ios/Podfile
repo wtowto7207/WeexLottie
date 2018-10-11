@@ -5,7 +5,7 @@ platform :ios, '8.0'
 def common
     pod 'WeexSDK', :git=>'https://github.com/apache/incubator-weex',:branch=>'0.16-dev'
 	pod 'WeexPluginLoader'
-    pod 'lottie-ios', :git=>'https://github.com/airbnb/lottie-ios.git', :tag=>'1.5.1'
+    pod 'lottie-ios', :git=>'https://github.com/airbnb/lottie-ios.git', :tag=>'2.5.2'
 end
 
 target 'WXLottie' do
