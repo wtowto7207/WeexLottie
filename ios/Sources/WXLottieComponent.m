@@ -270,10 +270,12 @@ WX_EXPORT_METHOD(@selector(setValue:))
 {
     WXLottieView * lottieView = (WXLottieView*)self.view;
     
-    [lottieView setSourceName: _src];
+    
     [lottieView setSpeed:_speed];
     [lottieView setProgress:_progress];
+//     先执行setSourceJson后执行setSourceName方可绘制本地的lottie文件
     [lottieView setSourceJson:_sourceJson];
+    [lottieView setSourceName: _src];
     [lottieView setLoop:_loop];
 }
 
