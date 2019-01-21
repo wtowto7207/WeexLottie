@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "WeexXLottie"
-  s.version      = "1.0.1"
+  s.version      = "1.0.4"
   s.summary      = "Weex Plugin"
 
   s.description  = <<-DESC
